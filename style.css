@@ -1,0 +1,80 @@
+#chrome-overlay-box {
+  position: fixed;
+  top: 470px;
+  left: 64px;
+  width: 964px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.95);
+  border: 4px solid #ff6600;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.95);
+  color: #fff;
+  z-index: 2147483647;
+  resize: none;
+  overflow: hidden;
+  min-width: 120px;
+  min-height: 80px;
+}
+
+#chrome-overlay-box.overlay-hidden {
+  display: none;
+}
+
+#chrome-overlay-box .overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: move;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  font-size: 14px;
+  user-select: none;
+}
+
+#chrome-overlay-box .overlay-close {
+  background: rgba(255, 102, 0, 0.12);
+  border: 1px solid #ff6600;
+  color: #ff6600;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+#chrome-overlay-box .overlay-close:hover {
+  background: rgba(255, 102, 0, 0.25);
+}
+
+#chrome-overlay-box .overlay-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  bottom: 0;
+  cursor: nwse-resize;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+#chrome-overlay-box:hover {
+  background: transparent;
+  box-shadow: none;
+  border: 4px solid #ff6600;
+}
+
+#chrome-overlay-box:hover .overlay-header {
+  background: transparent;
+}
+
+#chrome-overlay-box:hover .overlay-header > span {
+  opacity: 0;
+}
+
+#chrome-overlay-box:hover .overlay-handle {
+  opacity: 0;
+}
+
+body #chrome-overlay-box {
+  pointer-events: auto;
+}

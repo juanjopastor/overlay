@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Overlay Box",
+  "description": "Adds a movable, resizable overlay box on the current tab.",
+  "version": "1.0",
+  "action": {
+    "default_title": "Overlay Settings",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab"],
+  "commands": {
+    "toggle-overlay": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Toggle overlay"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

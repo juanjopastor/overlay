@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overlay Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      min-width: 260px;
+      padding: 16px;
+      margin: 0;
+      background: #222;
+      color: #eee;
+    }
+    h1 {
+      font-size: 16px;
+      margin: 0 0 12px;
+    }
+    p {
+      margin: 0 0 12px;
+      line-height: 1.5;
+      font-size: 13px;
+      color: #ddd;
+    }
+    .shortcut {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px 12px;
+      border: none;
+      border-radius: 6px;
+      background: #ff6600;
+      color: #111;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    button.secondary {
+      background: #444;
+      color: #eee;
+    }
+    button:hover {
+      opacity: 0.95;
+    }
+  </style>
+</head>
+<body>
+  <h1>Overlay</h1>
+  <p>Usa este botón para abrir el overlay o configurar el atajo de teclado.</p>
+  <button id="toggleButton">Abrir overlay</button>
+  <div class="shortcut">
+    Atajo actual: <strong id="shortcutText">Cargando...</strong>
+  </div>
+  <button id="configureButton" class="secondary">Configurar atajo</button>
+  <script src="popup.js"></script>
+</body>
+</html>
